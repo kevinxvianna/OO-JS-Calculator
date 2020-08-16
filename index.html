@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora OO JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/calc.js"></script>
+</head>
+<body>
+    <h1>Calculadora OO JS</h1>
+    <div class="calculator-body">
+        <div class="screen">
+            <input type="text" id="screen">
+        </div>
+        <div class="buttons">
+            <div class="l1">
+                <input type="button" value="CE" onclick="ClearEverything()">
+                <input type="button" value="%" onclick="insertSop('%')">
+                <input type="button" value="x^" onclick="insertOp('p')">
+                <input type="button" value="√" onclick="insertSop('sqrt')">    
+            </div>
+            <div class="l2">
+                <input type="button" value="7" onclick="insert('7')">
+                <input type="button" value="8" onclick="insert('8')">
+                <input type="button" value="9" onclick="insert('9')">
+                <input type="button" value="÷" onclick="insertOp('/')">        
+            </div>
+            <div class="l3">
+                <input type="button" value="4" onclick="insert('4')">
+                <input type="button" value="5" onclick="insert('5')">
+                <input type="button" value="6" onclick="insert('6')">
+                <input type="button" value="×" onclick="insertOp('x')">                       
+            </div>
+            <div class="l4">
+                <input type="button" value="1" onclick="insert('1')">
+                <input type="button" value="2" onclick="insert('2')">
+                <input type="button" value="3" onclick="insert('3')">
+                <input type="button" value="-" onclick="insertOp('-')">                       
+            </div>
+            <div class="l5">
+                <input type="button" value="," onclick="insert('.')">
+                <input type="button" value="0" onclick="insert('0')">
+                <input type="button" value="=" onclick="Equals()">
+                <input type="button" value="+" onclick="insertOp('+')">                       
+            </div>
+        </div>
+        <div class="calculator-shadow"></div>
+
+    </div>
+
+</body>
+</html>
