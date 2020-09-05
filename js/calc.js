@@ -11,22 +11,22 @@ operations = {
         this.res = parseFloat(this.v1 + this.v2);
     },
     minus(){
-        this.res = this.v1 - this.v2;
+        this.res = parseFloat(this.v1 - this.v2);
     },
     mult(){
-        this.res = this.v1 * this.v2;
+        this.res = parseFloat(this.v1 * this.v2);
     },
     div(){
-        this.res = this.v1 / this.v2;
+        this.res = parseFloat(this.v1 / this.v2);
     },
     sqrt(){
-        this.res = Math.sqrt(this.v1)
+        this.res = parseFloat(Math.sqrt(this.v1));
     },
     pow(){
-        this.res = Math.pow(this.v1, this.v2);
+        this.res = parseFloat(Math.pow(this.v1, this.v2));
     },
     percent(){
-        this.res = this.v1 / 100
+        this.res = parseFloat(this.v1 / 100)
     }
 }
 window.onload = function(){
