@@ -1,4 +1,4 @@
-var operations = new Object()
+var operations = new Object();
 
 operations = {
     v1: 0,
@@ -26,7 +26,7 @@ operations = {
         this.res = parseFloat(Math.pow(this.v1, this.v2));
     },
     percent(){
-        this.res = parseFloat(this.v1 / 100)
+        this.res = parseFloat(this.v1 / 100);
     }
 }
 window.onload = function(){
@@ -34,14 +34,12 @@ window.onload = function(){
 }
 function insertOp(op){
     operations.op = op;
-    operations.v1 = parseFloat(document.getElementById('screen').value)
-    console.log(operations.v1);
+    operations.v1 = parseFloat(document.getElementById('screen').value);
     document.getElementById('screen').value = '';
 }
 function insertSop(sop){
     operations.sop = sop;
-    operations.v1 = parseFloat(document.getElementById('screen').value)
-    console.log(operations.v1);
+    operations.v1 = parseFloat(document.getElementById('screen').value);
     document.getElementById('screen').value = '';
     singleClick();
 }
@@ -67,13 +65,11 @@ function singleClick(){
         case 'sqrt':
             operations.sqrt();
             document.getElementById('screen').value = operations.res;
-            console.log(operations.res)
             break;
 
         case '%':
             operations.percent();
             document.getElementById('screen').value = operations.res;
-            console.log(operations.res)
             break;
 
         default:
@@ -85,42 +81,32 @@ function Equals(){
     switch(operations.op){
         case '+':
             operations.v2 = parseFloat(document.getElementById('screen').value);
-            console.log(operations.v2)
             operations.plus();
             document.getElementById('screen').value = operations.res;
-            console.log(operations.res)
             break;
 
         case '-':
             operations.v2 = parseFloat(document.getElementById('screen').value);
-            console.log(operations.v2)
             operations.minus();
             document.getElementById('screen').value = operations.res;
-            console.log(operations.res)
             break;
 
         case '/':
             operations.v2 = parseFloat(document.getElementById('screen').value);
-            console.log(operations.v2)
             operations.div();
             document.getElementById('screen').value = operations.res;
-            console.log(operations.res)
             break;
         
         case 'x':
             operations.v2 = parseFloat(document.getElementById('screen').value);
-            console.log(operations.v2)
             operations.mult();
             document.getElementById('screen').value = operations.res;
-            console.log(operations.res)
             break;
 
         case 'p':
             operations.v2 = parseFloat(document.getElementById('screen').value);
-            console.log(operations.v2)
             operations.pow();
             document.getElementById('screen').value = operations.res;
-            console.log(operations.res)
             break;
 
         default:
