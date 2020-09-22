@@ -73,7 +73,3 @@ input[type=button]{
     font-family: dejaVu Sans;
     src: url("../font/DejaVuSansCondensed-Bold.ttf");
 }
-@font-face{
-    font-family: Calculator Font;
-    src: url("../font/Calculator.ttf");
-}
