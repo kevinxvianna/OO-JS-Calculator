@@ -1,3 +1,8 @@
+
+window.onload = function(){
+    document.getElementById('screen').value = operations.v1;
+}
+
 var operations = new Object();
 
 operations = {
@@ -7,36 +12,41 @@ operations = {
     sop: null,
     res: '',
 
-    plus(){
+    plus() {
         this.res = parseFloat(this.v1 + this.v2);
     },
-    minus(){
+
+    minus() {
         this.res = parseFloat(this.v1 - this.v2);
     },
-    mult(){
+
+    mult() {
         this.res = parseFloat(this.v1 * this.v2);
     },
-    div(){
+
+    div() {
         this.res = parseFloat(this.v1 / this.v2);
     },
-    sqrt(){
+
+    sqrt() {
         this.res = parseFloat(Math.sqrt(this.v1));
     },
-    pow(){
+
+    pow() {
         this.res = parseFloat(Math.pow(this.v1, this.v2));
     },
-    percent(){
+
+    percent() {
         this.res = parseFloat(this.v1 / 100);
     }
 }
-window.onload = function(){
-    document.getElementById('screen').value = operations.v1;
-}
+
 function insertOp(op){
     operations.op = op;
     operations.v1 = parseFloat(document.getElementById('screen').value);
     document.getElementById('screen').value = '';
 }
+
 function insertSop(sop){
     operations.sop = sop;
     operations.v1 = parseFloat(document.getElementById('screen').value);
@@ -51,7 +61,7 @@ function insert(n){
     document.getElementById('screen').value += n;
     
 }
-function ClearEverything(){
+function clearEverything(){
     operations.v1 = 0,
     operations.v2 = 0,
     operations.op = null,
@@ -73,11 +83,11 @@ function singleClick(){
             break;
 
         default:
-            window.alert('Operador inválido!');
+            window.alert('Invalid operator!');
     }
 }
 
-function Equals(){
+function equals(){
     switch(operations.op){
         case '+':
             operations.v2 = parseFloat(document.getElementById('screen').value);
@@ -110,7 +120,7 @@ function Equals(){
             break;
 
         default:
-            window.alert('Operador inválido!');
+            window.alert('Invalid operator!');
     }
 }
 
